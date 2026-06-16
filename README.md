@@ -44,11 +44,11 @@ docker compose up --build
 
 2. Acessar a Documentação Interativa (Swagger)
 Com o servidor rodando, abra o seu navegador e acesse:
-```bash
+ ```bash
 http://localhost:8000/docs
-```
+ ```
 
-    Executando as Migrations (Alembic)
+   Executando as Migrations (Alembic)
 Para que o banco de dados receba todas as tabelas e colunas corretamente, é necessário aplicar as migrações após subir o contêiner pela primeira vez.
 
 Abra um novo terminal e execute: 
@@ -56,7 +56,7 @@ Abra um novo terminal e execute:
 docker compose exec api alembic upgrade head
 ```
 
-     Rodando os Testes Automatizados
+   Rodando os Testes Automatizados
 Para validar o funcionamento da aplicação e garantir que nenhuma regra de negócio foi quebrada, rode a suíte completa de testes isolada dentro do contêiner: 
 ```bash
  docker compose exec api pytest 
